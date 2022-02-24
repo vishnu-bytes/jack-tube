@@ -1,0 +1,18 @@
+.app__mainpage {
+  display: flex;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.loading {
+  display: block !important;
+  width: 50%;
+  margin: auto;
+}
+textarea:focus, input:focus{
+  outline: none;
+}
