@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   background-color: #141414;
+  width: 100%;
 }
 
 .videoplayer__videodetails {

@@ -1,0 +1,16 @@
+.login{
+    background-color: white;
+    width: 39vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 24px;
+}
+.login_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

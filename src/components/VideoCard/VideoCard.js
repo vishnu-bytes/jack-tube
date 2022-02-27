@@ -1,6 +1,7 @@
 import React from "react";
 import Avatar from "@material-ui/core/Avatar";
 import "./VideoCard.css";
+import Moment from "react-moment";
 
 const VideoCard = ({
   image,
@@ -24,10 +25,7 @@ const VideoCard = ({
           <h4>{title}</h4>
           <p>{channel}</p>
           <p>
-            {parseInt(views) > 1000000
-              ? Math.ceil(parseInt(views) / 1000000) + "M"
-              : views}{" "}
-            views • {timestamp}
+              <Moment format="DD-MM-yyyy">{timestamp}</Moment>
           </p>
         </div>
       </div>

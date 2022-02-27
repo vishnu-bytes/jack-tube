@@ -16,3 +16,21 @@ a {
 textarea:focus, input:focus{
   outline: none;
 }
+iframe{
+  position: unset!important;
+  z-index: 0!important;
+}
+/* .ant-modal-content{
+  background-color: rgb(41, 41, 41)!important;
+  color: white;
+}
+.ant-modal-footer{
+  border-top: unset!important;
+}
+.ant-btn{
+  background: transparent!important;
+  border: unset!important;  
+} */
+.ant-popover-inner{
+  background: #383838!important;
+}

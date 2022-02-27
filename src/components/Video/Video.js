@@ -1,10 +1,11 @@
 import React from "react";
-import YouTube from "react-youtube";
+import ReactPlayer from 'react-player'
 
 const Video = ({ videoId }) => {
+  console.log(videoId,"video url")
   return (
     <div>
-      <YouTube videoId={videoId} />
+      <ReactPlayer controls playing url={videoId} />
     </div>
   );
 };
