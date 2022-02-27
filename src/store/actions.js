@@ -94,6 +94,8 @@ const actions = {
           history.push("/");
         } else {
           try {
+            localStorage.setItem("email", values.email);
+            
             const authData = await auth.createUserWithEmailAndPassword(
               values.username,
               values.password
