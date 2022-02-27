@@ -6,7 +6,9 @@ import RecommendedVideos from "./components/RecommendedVideos/RecommendedVideos"
 import SearchPage from "./components/SearchPage/SearchPage";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import SignIn from "./components/SignIn";
+import SignIn from "./components/SignIn/";
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          <Route exact path="/signin" component={SignIn}></Route>
+
           <Route path="/video/:videoId">
             <div className="app__mainpage">
               <VideoPlayer />
@@ -31,7 +35,6 @@ function App() {
               <RecommendedVideos />
             </div>
           </Route>
-          <Route exact path="/signin" component={SignIn}></Route>
         </Switch>
       </Router>
     </div>

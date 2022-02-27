@@ -42,3 +42,6 @@
 .sidebarrow.selected > .sidebarrow__title {
   font-weight: bold;
 }
+.liked svg{
+  color:red!important
+}
