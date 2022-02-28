@@ -12,3 +12,14 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.ant-drawer-body {
+  background: #212121 !important;
+  padding: 24px 0 0 0 !important;
+}
+.ant-drawer-header {
+  background: #212121 !important;
+  border-bottom: unset !important;
+}
+.MuiSvgIcon-root {
+  cursor: pointer;
+}

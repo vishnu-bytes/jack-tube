@@ -7,14 +7,17 @@ import { useWebinarStore } from "../../store";
 import { Empty } from "antd";
 
 const RecommendedVideos = () => {
-  const [{ studentList, loading }, { getStudent }] = useWebinarStore();
+  const [{ studentList, loading, drawerValue }, { getStudent }] =
+    useWebinarStore();
   useEffect(() => {
     getStudent();
   }, [getStudent]);
 
-
   return (
-    <div className="recommendedvideos">
+    <div
+      className="recommendedvideos"
+      style={{ marginLeft: drawerValue ? "378px" : "0px" }}
+    >
       {loading ? (
         <CircularProgress className="loading" color="secondary" />
       ) : (
