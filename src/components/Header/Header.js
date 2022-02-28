@@ -6,13 +6,14 @@ import { Avatar } from "antd";
 import { Link } from "react-router-dom";
 import { Popover } from "antd";
 import { useWebinarStore } from "../../store";
-import ColumnGroup from "antd/lib/table/ColumnGroup";
+import Youtube from "../Assets/youtube.png";
 
 // const email = localStorage.getItem("email");
 
 function Header() {
   const [inputSearch, setInputSearch] = useState("");
-  const [{ token ,drawerValue}, { onSignout, search,drawerOn }] = useWebinarStore();
+  const [{ token, drawerValue }, { onSignout, search, drawerOn }] =
+    useWebinarStore();
   const [email, setemail] = useState("");
   const [name, setname] = useState("");
 
@@ -22,7 +23,7 @@ function Header() {
 
     const namedat = localStorage.getItem("name");
     setname(namedat);
-    console.log(namedat,"name value")
+    console.log(namedat, "name value");
 
     const listener = (event) => {
       if (event.code === "Enter" || event.code === "NumpadEnter") {
@@ -40,14 +41,17 @@ function Header() {
 
   return (
     <div className="header">
-      <div className="header__left">
-        <MenuIcon onClick={()=>drawerOn(!drawerValue)} />
+      <div
+        className="header__left"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <MenuIcon onClick={() => drawerOn(!drawerValue)} />
         <Link to="/">
-          <img
-            className="header__logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg"
-            alt=""
-          />
+          <img className="header__logo" src={Youtube} alt="" />
         </Link>
       </div>
       <div className="header__center">

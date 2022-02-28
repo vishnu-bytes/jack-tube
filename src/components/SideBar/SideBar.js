@@ -6,20 +6,23 @@ import { useWebinarStore } from "../../store";
 import { Drawer } from "antd";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
+import Youtube from "../Assets/youtube.png";
 
 const SideBar = () => {
   const [{ drawerValue }, { drawerOn }] = useWebinarStore();
   return (
     <Drawer
       title={
-        <div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <MenuIcon onClick={() => drawerOn(!drawerValue)} />
           <Link to="/">
-            <img
-              className="header__logo"
-              src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg"
-              alt=""
-            />
+            <img className="header__logo" src={Youtube} alt="" />
           </Link>
         </div>
       }
